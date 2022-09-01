@@ -1,7 +1,7 @@
 # InternationalizationAPI
 - A Minecraft Development Internationalization API
 
-![https://img.shields.io/github/v/release/killerprojecte/InternationalizationAPI.svg](/)
+![Release](https://img.shields.io/github/v/release/killerprojecte/InternationalizationAPI.svg)
 
 ## Dependency
 - Gradle
