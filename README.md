@@ -1,6 +1,7 @@
 # InternationalizationAPI
 - A Minecraft Development Internationalization API
-[!Release](http://github-release-version.herokuapp.com/github/killerprojecte/InternationalizationAPI/release.png?style=flat)
+
+[!http://github-release-version.herokuapp.com/github/killerprojecte/InternationalizationAPI/release.png?style=flat](http://github-release-version.herokuapp.com/github/killerprojecte/InternationalizationAPI/release.png?style=flat)
 
 ## Dependency
 - Gradle
