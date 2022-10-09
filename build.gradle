@@ -1,3 +1,4 @@
+
 plugins {
     id 'java'
     id 'maven-publish'
@@ -28,6 +29,11 @@ shadowJar {
                 "Main-Class" : "org.fastmcmirror.i18n.i18nTest"
         )
     }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 8
 }
 
 publishing {
