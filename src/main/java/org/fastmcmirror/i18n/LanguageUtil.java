@@ -27,7 +27,7 @@ public class LanguageUtil {
             }
             return;
         }
-        String js = Util.FileToString(Util.dlFile(versionjo.get("assetIndex").getAsJsonObject().get("url").getAsString().replaceFirst("https://piston-meta.mojang.com","https://launchermeta.fastmcmirror.org"),savePath,version.getId() + "-assets.json"));
+        String js = Util.FileToString(Util.dlFile(versionjo.get("assetIndex").getAsJsonObject().get("url").getAsString().replaceFirst("https://piston-meta.mojang.com","https://bmclapi2.bangbang93.com"),savePath,version.getId() + "-assets.json"));
         JsonObject object = new JsonParser().parse(js).getAsJsonObject().get("objects").getAsJsonObject();
         for (String key : object.keySet()){
             if (!key.equals("minecraft/lang/" + language.toString() + ".json")) continue;
