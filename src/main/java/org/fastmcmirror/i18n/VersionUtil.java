@@ -11,7 +11,7 @@ public class VersionUtil {
     protected VersionUtil(String savePath) {
         versions = new HashMap<>();
         long starttime = System.currentTimeMillis();
-        String versionjson = Util.FileToString(Util.dlFile("https://bmclapi2.bangbang93.com/mc/game/version_manifest.json", savePath, "versions.json"));
+        String versionjson = Util.FileToString(Util.dlFile("https://bmclapi2.bangbang93.com/mc/game/version_manifest.json", "https://launchermeta.mojang.com/mc/game/version_manifest.json", savePath, "versions.json"));
         JsonObject vjo = new JsonParser().parse(versionjson).getAsJsonObject();
         JsonArray vja = vjo.get("versions").getAsJsonArray();
         for (JsonElement je : vja) {
