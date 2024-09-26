@@ -23,7 +23,7 @@ public class Version {
         return VersionType.valueOf(type);
     }
 
-    public String getUrl(){
+    public String getUrl() {
         return url;
     }
 
