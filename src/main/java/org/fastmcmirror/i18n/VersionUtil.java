@@ -15,7 +15,7 @@ public class VersionUtil {
         JsonObject vjo = new JsonParser().parse(versionjson).getAsJsonObject();
         VersionManifest manifest = new Gson().fromJson(vjo, VersionManifest.class);
         for (Version version : manifest.getVersions()) {
-            version.put(version.getId(), version);
+            versions.put(version.getId(), version);
         }
         //System.out.println("Getting the version list took " + (System.currentTimeMillis() - starttime) + "ms");
     }

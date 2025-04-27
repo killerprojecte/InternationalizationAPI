@@ -2,11 +2,13 @@ package org.fastmcmirror.i18n;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Version {
+import java.util.List;
+
+public class VersionManifest {
     @SerializedName("versions")
     private List<Version> versions;
 
     public List<Version> getVersions() {
-        return id;
+        return versions;
     }
 }

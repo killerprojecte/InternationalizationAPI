@@ -1,18 +1,14 @@
 package org.fastmcmirror.i18n.readers;
 
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
+import java.io.*;
 import java.util.Properties;
 
 public class LangFileReader implements LanguageReader {
     private final Properties props;
-    public LangFileReader(String str) {
+    public LangFileReader(File file) {
         props = new Properties();
         try {
-            props.load(new ByteArrayInputStream(str.getBytes(StandardCharsets.UTF_8)));
+            props.load(new FileReader(file));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

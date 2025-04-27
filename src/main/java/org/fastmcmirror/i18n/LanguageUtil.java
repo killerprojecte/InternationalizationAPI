@@ -45,11 +45,12 @@ public class LanguageUtil {
             JsonObject langobj = object.get(key).getAsJsonObject();
             String hash = langobj.get("hash").getAsString();
             String path = hash.substring(0, 2) + "/" + hash;
-            String ljson = Util.FileToString(Util.dlFile("https://bmclapi2.bangbang93.com/assets/" + path, "https://resources.download.minecraft.net/" + path, savePath, language + (legacy ? ".lang" : ".json")));
+            File file = Util.dlFile("https://bmclapi2.bangbang93.com/assets/" + path, "https://resources.download.minecraft.net/" + path, savePath, language + (legacy ? ".lang" : ".json"));
+            String ljson = Util.FileToString(file);
             if (!legacy) {
                 langJson = new JsonFileReader(ljson);
             } else {
-                langJson = new LangFileReader(ljson);
+                langJson = new LangFileReader(file);
             }
         }
         //System.out.println("Initializing languages took " + (System.currentTimeMillis() - starttime) + "ms");
